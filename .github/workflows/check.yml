@@ -2,7 +2,8 @@ name: Check Melon Tickets
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # 代表每 5 分鐘檢查一次
+    - cron: '*/5 * * * *' # 每 5 分鐘檢查一次
+  workflow_dispatch:      # ⬅️ 加上這一行，網頁上就會出現手動執行的按鈕了！
 
 jobs:
   job:
