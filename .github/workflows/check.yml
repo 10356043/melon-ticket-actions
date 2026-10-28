@@ -8,11 +8,13 @@ jobs:
   job:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    permissions:
+      contents: read
     steps:
       - name: Check Tickets
-        uses: mooyoul/melon-ticket-actions@v1.1.0 # 也可以用你的 repo 或是指定的版本
+        uses: mooyoul/melon-ticket-actions@v1.1.0
         with:
-          product-id:213836
-          schedule-id:100002
+          product-id: 213836
+          schedule-id: 100002
           seat-id: 1_0
-          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }} # 接收通知的 Webhook
+          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
